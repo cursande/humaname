@@ -4,10 +4,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/cursande/humaname/src"
+	h "github.com/cursande/humaname/src"
 	"github.com/urfave/cli/v2"
 )
-
 
 func printName(name string, ctx *cli.Context) {
 	print(name)
@@ -19,14 +18,14 @@ func printName(name string, ctx *cli.Context) {
 	return
 }
 
-func genderFromFlag(ctx *cli.Context) humaname.Gender {
+func genderFromFlag(ctx *cli.Context) h.Gender {
 	switch ctx.String("gender") {
 	case "m":
-		return humaname.Male
+		return h.Male
 	case "f":
-		return humaname.Female
+		return h.Female
 	default:
-		return humaname.All
+		return h.All
 	}
 
 }
@@ -35,14 +34,14 @@ func main() {
 	app := &cli.App{
 		Name:    "humaname",
 		Usage:   "For generating regular human-sounding names",
-		Version: "1.0.0",
+		Version: "0.1.0",
 		Commands: []*cli.Command{
 			{
 				Name:    "both",
 				Aliases: []string{"b"},
 				Action: func(ctx *cli.Context) error {
 					gender := genderFromFlag(ctx)
-					printName(humaname.PickRandomName(humaname.Both, gender), ctx)
+					printName(h.PickRandomName(h.Both, gender), ctx)
 					return nil
 				},
 			},
@@ -51,7 +50,7 @@ func main() {
 				Aliases: []string{"f"},
 				Action: func(ctx *cli.Context) error {
 					gender := genderFromFlag(ctx)
-					printName(humaname.PickRandomName(humaname.First, gender), ctx)
+					printName(h.PickRandomName(h.First, gender), ctx)
 					return nil
 				},
 			},
@@ -60,7 +59,7 @@ func main() {
 				Aliases: []string{"l"},
 				Action: func(ctx *cli.Context) error {
 					gender := genderFromFlag(ctx)
-					printName(humaname.PickRandomName(humaname.Last, gender), ctx)
+					printName(h.PickRandomName(h.Last, gender), ctx)
 					return nil
 				},
 			},
