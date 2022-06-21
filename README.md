@@ -6,7 +6,22 @@ Sometimes for manual testing or a simple script, you just need **one** regular s
 
 ## Installation
 
-TBD
+### Linux x86 (via curl)
+``` shell
+# install
+sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.0/humaname_linux_amd64
+sudo chmod +x /usr/local/bin/humaname
+```
+
+### With Go already installed
+``` shell
+go get -u github.com/cursande/humaname
+```
+
+## Removal
+``` shell
+sudo rm /usr/local/bin/humaname
+```
 
 ## Usage
 
