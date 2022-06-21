@@ -18,11 +18,6 @@ sudo chmod +x /usr/local/bin/humaname
 go get -u github.com/cursande/humaname
 ```
 
-## Removal
-``` shell
-sudo rm /usr/local/bin/humaname
-```
-
 ## Usage
 
 Help:
