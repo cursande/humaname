@@ -13,9 +13,11 @@ sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/relea
 sudo chmod +x /usr/local/bin/humaname
 ```
 
-### With Go already installed
+### OSX x86
 ``` shell
-go get -u github.com/cursande/humaname
+# install
+sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.0/humaname_darwin_amd64
+sudo chmod +x /usr/local/bin/humaname
 ```
 
 ## Usage
