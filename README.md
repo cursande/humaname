@@ -8,14 +8,19 @@ Sometimes for manual testing or a simple script, you just need **one** regular s
 
 ### Linux (via curl)
 ``` shell
-sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.0/humaname_linux_amd64
+sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.1/humaname_linux_amd64
 sudo chmod +x /usr/local/bin/humaname
 ```
 
 ### Mac/OSX
 ``` shell
-sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.0/humaname_darwin_amd64
+# amd64
+sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.1/humaname_darwin_amd64
 sudo chmod +x /usr/local/bin/humaname
+# arm64
+sudo curl -Lo /usr/local/bin/humaname https://github.com/cursande/humaname/releases/download/v0.1.1/humaname_darwin_arm64
+sudo chmod +x /usr/local/bin/humaname
+
 ```
 
 ## Usage
