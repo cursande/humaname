@@ -34,7 +34,7 @@ func main() {
 	app := &cli.App{
 		Name:    "humaname",
 		Usage:   "For generating regular human-sounding names",
-		Version: "0.1.0",
+		Version: "0.1.1",
 		Commands: []*cli.Command{
 			{
 				Name:    "both",
